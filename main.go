@@ -8,7 +8,7 @@ import (
 
 func index(w http.ResponseWriter, req *http.Request) {
 
-	fmt.Fprintf(w, "hello\n")
+	fmt.Fprintf(w, "hello world\n")
 }
 
 func headers(w http.ResponseWriter, req *http.Request) {
