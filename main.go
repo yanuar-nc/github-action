@@ -7,8 +7,11 @@ import (
 )
 
 func index(w http.ResponseWriter, req *http.Request) {
-
 	fmt.Fprintf(w, "hello world\n")
+}
+
+func user(w http.ResponseWriter, req *http.Request) {
+	fmt.Fprintf(wx, "hello user\n")
 }
 
 func headers(w http.ResponseWriter, req *http.Request) {
@@ -23,6 +26,7 @@ func headers(w http.ResponseWriter, req *http.Request) {
 func main() {
 
 	http.HandleFunc("/", index)
+	http.HandleFunc("/user", user)
 	http.HandleFunc("/headers", headers)
 
 	log.Println("server is running")
